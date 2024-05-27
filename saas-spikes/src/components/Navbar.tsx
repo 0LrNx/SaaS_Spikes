@@ -1,4 +1,4 @@
-import logo from '@/assets/logo_vaultflow.png';
+import logo from "@/assets/logo_vaultflow.png";
 // import { Button } from "@/components/ui/button"
 import Button from "@/components/Button";
 
@@ -18,7 +18,7 @@ const Navbar = () => {
                     About us
                 </li>
             </ul>
-            <Button color="white" colorText="black" border="none">
+            <Button color="bg-white" colorText="text-black" border="none">
                 Download the app
             </Button>
         </nav>
