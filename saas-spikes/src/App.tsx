@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Partners from "@/components/Partners";
 import Text from "@/components/Text";
 import Cards from "@/components/Cards";
+import Banner from "@/components/Banner";
+import Footer from "@/components/Footer";
 
 import analytics from "@/assets/analytics.png";
 import tokens from "@/assets/credit_token.png";
@@ -13,9 +15,9 @@ import "./index.css";
 
 function App() {
   return (
-    <main>
+    <main className="pt-10 bg-hero-bg">
       <NavBar />
-      <div className="bg-custom-background">
+      <div className="">
         <Hero />
         <Partners />
         <Text
@@ -46,6 +48,12 @@ function App() {
             image={digital_token}
           />
         </div>
+        <Banner
+          title="Our powerful analytics provides invaluable insights."
+          paragraphe="Unlock the power of data with our cutting-edge analytics product. Get instant insights with our user-friendly Analytics Dashboard, and take advantage of our innovative digital credit tokens to reward your customers and incentivize engagement. "
+          textButton="Download the app"
+        />
+        <Footer />
       </div>
     </main>
   );

@@ -5,7 +5,7 @@ import Button from "@/components/Button";
 
 const Navbar = () => {
     return (
-        <nav className="flex justify-between items-center bg-primary p-2 px-8 w-[95%] rounded-[25px] mt-10 mx-auto">
+        <nav className="flex justify-between items-center bg-primary p-2 px-8 w-[95%] rounded-[25px] mx-auto">
             <img src={logo} alt="Logo Vaultflow" />
             <ul className="flex gap-[32px]">
                 <li className="cursor-pointer">
