@@ -1,8 +1,14 @@
 import logo from "@/assets/logo_vaultflow.png";
+import { motion } from "framer-motion"
 
 const Footer = () => {
     return (
-        <footer className="h-[466px] px-64 py-20 mt-10">
+        <motion.footer 
+            initial={{ opacity: 0, y: 50}}
+            whileInView={{ opacity: 1, y: 0}}
+            transition={{ ease: "easeInOut", duration: 0.8 }}
+            className="h-[466px] px-64 py-20 mt-10"
+        >
         <div className="flex flex-row gap-36">
             <div className="flex flex-col">
                 <div>
@@ -51,7 +57,7 @@ const Footer = () => {
                 
             </div>
 
-        </footer>
+        </motion.footer>
     )
 }
 

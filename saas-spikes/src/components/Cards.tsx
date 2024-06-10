@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion"
 
 interface CardsProps {
   logo: string;
@@ -11,7 +12,12 @@ interface CardsProps {
 
 const Cards: React.FC<CardsProps> = (props) => {
   return (
-    <div className={`bg-cards drop-shadow ${props.hasImage ? 'w-[1180px]' : 'w-[578px]'} h-[372px] rounded-[20px] px-10 py-12 flex`}>
+    <motion.div 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ ease: "easeInOut", duration: 0.8 }}
+      className={`bg-cards drop-shadow ${props.hasImage ? 'w-[1180px]' : 'w-[578px]'} h-[372px] rounded-[20px] px-10 py-12 flex`}
+    >
       <div className={`${props.hasImage ? 'flex-1' : ''}`}>
         <img className="h-[50px] w-auto drop-shadow rounded-xl" src={props.logo} alt="Logo de la carte" />
         <h1 className="text-[32px] font-medium mt-4">{props.title}</h1>
@@ -23,7 +29,7 @@ const Cards: React.FC<CardsProps> = (props) => {
           <img className="h-[300px] w-auto drop-shadow rounded-[20px]" src={props.image} alt="Image de la carte" />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
